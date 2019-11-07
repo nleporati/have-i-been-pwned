@@ -2,28 +2,27 @@
 
 // var API_URL = 'https://haveibeenpwned.com/unifiedsearch/';
 // Eejcutar proxy lcp --proxyUrl https://haveibeenpwned.com (npm install -g local-cors-proxy)
-// var API_URL = 'http://localhost:8010/proxy/unifiedsearch/';
-var API_URL = 'https://haveibeenpwned.com/api/v3/breachedaccount/';
+var API_URL = 'http://localhost:8010/proxy/api/v3/breachedaccount/';
+// var API_URL = 'http://127.0.0.1:5000/https://haveibeenpwned.com/api/v3/breachedaccount/';
 // var API_URL = 'https://cors-anywhere.herokuapp.com/https://haveibeenpwned.com/api/v3/breachedaccount/';
 // var API_URL = 'http://localhost:8010/proxy/api/v3/breachedaccount/'
-var API_KEY = "your-api-key";
+var API_KEY = "key";
+
+var BYPASS_URL = "http://localhost:3167/";
 
 var input = document.getElementById('password-boxs');
 var resBox = document.getElementById('response');
 var resText = document.getElementById('response-text');
 var breachesBox = document.getElementById('breaches');
 
-
-var headers = new Headers();
-headers.append('hibp-api-key', API_KEY);
-headers.append('Accept', 'application/json');
-headers.append('Content-Type', 'application/json');
-headers.append('Access-Control-Allow-Origin', '*');
-
-
+var headers = {
+  'hibp-api-key': API_KEY,
+  'Accept': 'application/json',
+  'Content-Type': 'application/json',
+  'Access-Control-Allow-Origin': '*'
+}
 var options = {
   method: 'GET',
-  mode: 'no-cors',
   headers: headers
 };
 
@@ -36,18 +35,8 @@ function getData(key) {
 
     console.log(email);
     fetchData(email);
-    // ajax(email);
 
   }
-}
-
-function ajax(email) {
-  $.ajax({
-      url: `${API_URL + email}?truncateResponse=false&callback=?`,
-      method: "GET",
-      dataType: 'jsonp',
-      headers: headers
-  });
 }
 
 function fetchData(email) {
