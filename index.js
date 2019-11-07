@@ -8,8 +8,6 @@ var API_URL = 'http://localhost:8010/proxy/api/v3/breachedaccount/';
 // var API_URL = 'http://localhost:8010/proxy/api/v3/breachedaccount/'
 var API_KEY = "key";
 
-var BYPASS_URL = "http://localhost:3167/";
-
 var input = document.getElementById('password-boxs');
 var resBox = document.getElementById('response');
 var resText = document.getElementById('response-text');
