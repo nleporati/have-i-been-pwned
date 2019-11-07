@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>3IT Ingeniería y Desarrollo</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <body>
+        <div class="contenedor-1" id="cabeza-pass">
+            <nav>
+                <div class="logo"></div>
+                <p class="educa">
+                    SITIO DE USO EDUCATIVO
+                </p>
+            </nav>
+            <div class="contenclave" id="conteclave">
+                <h1>He sido hackeado?</h1>
+                <p>Escriba su correo aquí:</p>
+                <input id="password-boxs" type="text" value="nicomelicalderon@gmail.com"/>
+            </div>
+            <div id="response" style="display: none;">
+                <p id="response-text"></p>
+                <p id="breaches"></p>
+            </div>
+        </div>
+
+        <div class="contenedor-2" id="pie-pass">
+            <div id="meme">
+            </div>
+            <div class="textos">
+                <div class="respuesta">
+                    <h2 id="h2">Contraseña extremadamente débil</h2>
+                    <p id="p">¿Esto es una broma? Hasta Homero Simpson podría adivinar tu contraseña.</p>
+                </div>
+                <div id="password-checks" class="hsimp-checks"></div>
+            </div>
+        </div>
+
+        <script src="index.js"></script>
+        <!-- <script src="hsimp.min.js"></script>
+        <script>
+
+            (function (doc) {
+                var passwordInput = doc.getElementById("password-boxs"),
+                    checksList = doc.getElementById("password-checks");
+
+                // Code to output the checks returned by HSIMP
+                var renderChecks = function (checks, input) {
+                    checksList.innerHTML = "";
+
+                    for (var i = 0, l = checks.length; i < l; i++) {
+                        var li = doc.createElement("div"),
+                            title = doc.createElement("p"),
+                            message = doc.createElement("p");
+
+                        title.innerHTML = checks[i].name;
+                        li.appendChild(title);
+
+                        message.innerHTML = checks[i].message;
+                        li.appendChild(message);
+
+                        checksList.appendChild(li);
+                    }
+                };
+
+                // Setup the HSIMP object
+                var attachTo = hsimp({
+                    outputChecks: renderChecks
+                });
+                
+                // Run the HSIMP
+                attachTo(passwordInput);
+
+            }
+            (this.document));
+
+            window.console.log = nivelseguridad; 
+
+            function nivelseguridad(msg) {
+                document.getElementById("cabeza-pass").setAttribute("class", "contenedor-1--" + msg);
+                document.getElementById("meme").setAttribute("class", "nvl-" + msg);
+
+                for (var i = 0; i < document.getElementsByTagName('input').length; i++){
+                    if (document.getElementsByTagName('input')[i].value == ""){
+                        document.getElementById("cabeza-pass").classList.remove("contenedor-1--bad");
+                        document.getElementById("cabeza-pass").classList.add("contenedor-1");
+                        document.getElementById("conteclave").classList.remove("mt-content");
+                        document.getElementById("pie-pass").style.display = "none";
+                    }
+                    else {
+                        document.getElementById("conteclave").classList.add("mt-content");
+                        document.getElementById("pie-pass").style.display = "block";
+                    }
+                }
+            }
+        </script> -->
+
+
+    </body>
+</html>

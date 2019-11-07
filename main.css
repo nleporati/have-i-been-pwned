@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "SourceSans";
+  src: url("SourceSansPro-Regular.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "SourceSans";
+  src: url("SourceSansPro-SemiBold.ttf");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "SourceSans";
+  src: url("SourceSansPro-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "SourceSans";
+  src: url("SourceSansPro-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: "SourceSans";
+  src: url("SourceSansPro-Black.ttf");
+  font-weight: 900;
+}
+body {
+  font-family: "SourceSans";
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 18px;
+}
+
+.educa {
+  font-size: 14px;
+  background: #3F3E40;
+  padding: 4px 20px;
+  position: absolute;
+  right: 0;
+  top: 15px;
+}
+.educa::before {
+  content: "";
+  width: 72px;
+  height: 27px;
+  background: #FFCB05;
+  position: absolute;
+  border-radius: 14px;
+  top: 0;
+  left: -60px;
+}
+
+nav {
+  width: 100%;
+  height: 130px;
+}
+nav .logo {
+  background: url(logo.svg) no-repeat;
+  position: relative;
+  top: 27px;
+  left: 30px;
+  width: 136px;
+  height: 104px;
+}
+
+input {
+  width: 370px;
+  height: 45px;
+  color: #3F3E40;
+  border-radius: 27px;
+  border: none;
+  font-size: 32px;
+  padding: 0px 27px 7px 27px;
+  letter-spacing: 2px;
+}
+input:focus {
+  outline: none;
+}
+
+.contenclave {
+  width: 424px;
+  left: 50%;
+  position: relative;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  margin-top: 15%;
+  transition: all 0.5s linear;
+}
+.contenclave::before {
+  content: "";
+  position: absolute;
+  width: 37px;
+  height: 59px;
+  background: #FFCB05;
+  border-radius: 19px;
+  top: -65px;
+  box-shadow: 60px 0px 0px #FFCB05, 120px 0px 0px #FFCB05;
+}
+.contenclave p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.mt-content {
+  margin-top: 95px !important;
+  transition: all 0.15s linear;
+}
+
+.contenedor-1 {
+  height: 100vh;
+  background: url(bg_.svg) no-repeat bottom, linear-gradient(0deg, #01748D 0%, #1FC9D3 100%);
+  background-size: contain;
+  transition: all 0.5s linear;
+}
+
+.contenedor-2 {
+  color: #3F3E40;
+  margin-top: 60px;
+  text-align: left;
+  display: none;
+}
+
+.contenedor-1--bad, .contenedor-1--insecure {
+  height: 358px;
+  background: linear-gradient(135deg, #F05C2C 0%, #EC4137 100%);
+  transition: all 0.15s linear;
+}
+
+.contenedor-1--ok {
+  height: 358px;
+  background: linear-gradient(45deg, #FF9E24 0%, #F6A91D 100%);
+  transition: all 0.15s linear;
+}
+
+.contenedor-1--good {
+  height: 358px;
+  background: linear-gradient(90deg, #3BB14A 0%, #079247 100%);
+  transition: all 0.15s linear;
+}
+
+.nvl-bad, .nvl-insecure, .nvl-ok, .nvl-good {
+  width: 744px;
+  height: 565px;
+  margin-left: 140px;
+  display: inline-block;
+  vertical-align: top;
+  background: no-repeat bottom;
+  background-size: cover;
+}
+
+.nvl-bad, .nvl-insecure {
+  background-image: url(nivel1.svg);
+}
+
+.nvl-ok {
+  background-image: url(nivel2.svg);
+}
+
+.nvl-good {
+  background-image: url(nivel3.svg);
+}
+
+.textos {
+  width: 674px;
+  margin-left: 134px;
+  display: inline-block;
+  height: 565px;
+}
+
+.respuesta {
+  text-align: left;
+}
+.respuesta h2, .respuesta p {
+  padding-left: 35px;
+}
+.respuesta h2 {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.respuesta p {
+  color: #FFCB05;
+  background: #00708A;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border-radius: 0px 37px 37px 37px;
+  position: relative;
+}
+.respuesta p::before {
+  content: "";
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  background: #00708A;
+  top: -41px;
+  left: 0;
+  z-index: -2;
+}
+.respuesta p::after {
+  content: "";
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  border-radius: 41px;
+  background: white;
+  top: -82px;
+  left: -1px;
+  z-index: -1;
+}
+
+.hsimp-checks {
+  height: 392px;
+  overflow: scroll;
+}
+.hsimp-checks div p:first-child {
+  background: #FFCB05;
+  color: #00708A;
+  font-weight: 700;
+  font-style: italic;
+  padding: 10px 15px;
+  margin: 0;
+}
+.hsimp-checks div p:last-child {
+  background: #F2F4F4;
+  padding: 10px 15px;
+  min-height: 94px;
+  margin-bottom: 15px;
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
