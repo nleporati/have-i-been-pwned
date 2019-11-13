@@ -49,21 +49,23 @@ p {
 
 .educa {
   font-size: 14px;
-  background: #3F3E40;
-  padding: 4px 20px;
+  color: black;
+  font-weight: bold;
+  background: #FFCB05;
+  padding: 4px 30px;
   position: absolute;
   right: 0;
   top: 15px;
 }
 .educa::before {
   content: "";
-  width: 72px;
-  height: 27px;
-  background: #FFCB05;
+  width: 25px;
+  height: 25px;
+  background: #FFF;
   position: absolute;
   border-radius: 14px;
   top: 0;
-  left: -60px;
+  left: -15px;
 }
 
 nav {
@@ -95,7 +97,7 @@ input:focus {
 
 .contenclave {
   width: 424px;
-  left: 50%;
+  left: 40%;
   position: relative;
   transform: translate(-50%, -50%);
   text-align: left;
@@ -106,11 +108,11 @@ input:focus {
   content: "";
   position: absolute;
   width: 37px;
-  height: 59px;
-  background: #FFCB05;
+  height: 350px;
+  background: #FFF;
   border-radius: 19px;
-  top: -65px;
-  box-shadow: 60px 0px 0px #FFCB05, 120px 0px 0px #FFCB05;
+  top: -380px;
+  box-shadow: 60px 0px 0px #FFF, 120px 0px 0px #FFF, 180px 0px 0px #FFF, 240px 0px 0px #FFF, 300px 0px 0px #FFF, 360px 0px 0px #FFF, 420px 0px 0px #FFF, 480px 0px 0px #FFF, 540px 0px 0px #FFF, 600px 0px 0px #FFF, 660px 0px 0px #FFF;
 }
 .contenclave p {
   margin-top: 0;
@@ -124,7 +126,7 @@ input:focus {
 
 .contenedor-1 {
   height: 100vh;
-  background: url(bg_.svg) no-repeat bottom, linear-gradient(0deg, #01748D 0%, #1FC9D3 100%);
+  background: linear-gradient(0deg, #01748D 0%, #1FC9D3 100%);
   background-size: contain;
   transition: all 0.5s linear;
 }
@@ -134,11 +136,12 @@ input:focus {
   margin-top: 60px;
   text-align: left;
   display: none;
+  padding: 0px 15%;
 }
 
 .contenedor-1--bad, .contenedor-1--insecure {
   height: 358px;
-  background: linear-gradient(135deg, #F05C2C 0%, #EC4137 100%);
+  background: linear-gradient(135deg, #01748D 0%, #1FC9D3 100%);
   transition: all 0.15s linear;
 }
 
@@ -176,12 +179,86 @@ input:focus {
   background-image: url(nivel3.svg);
 }
 
+#carousel {
+  padding-top: 140px;
+  margin-left: 40%;
+}
+
+#meme {
+  position: absolute;
+  left: -100px;
+}
+
 .textos {
   width: 674px;
   margin-left: 134px;
   display: inline-block;
   height: 565px;
 }
+
+.w-50 {
+  width: 20%;
+}
+
+.card {
+  width: 674px;
+  height: 225px !important;
+  color: white;
+  background-color: chartreuse;
+  text-align: left;
+  background: black;
+  display: flex !important;
+  margin: 10px;
+  box-shadow: 10px 10px rgba(0, 0, 0, .45);
+}
+
+.card .row {
+  width: 50%;
+  padding: 20px 20px;
+  display: flex;
+}
+
+.card .row.left {
+  background: #FFCB05;
+  color: black;
+  font-size: 24px;
+}
+
+.card .row.left .image {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: center;
+  padding: 2px;
+}
+
+.card .title {
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.card .date {
+  /* margin-top: 2px; */
+}
+
+.card .row.left hr {
+  border-style: solid;
+  color: black;
+  border-width: .5px;
+}
+
+.row ul {
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 70%;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row li {list-style-type: none;}
+.row li:before{content: "- "}
 
 .respuesta {
   text-align: left;
@@ -244,3 +321,10 @@ input:focus {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+.slick-dots li button:before {
+  font-size: 64px;
+}
+/* .slick-dots li.slick-active button:before {
+  color: red;
+} */
