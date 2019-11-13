@@ -3,7 +3,7 @@
 // lcp --proxyUrl https://haveibeenpwned.com (npm install -g local-cors-proxy)
 var API_URL = 'http://localhost:8010/proxy/api/v3/breachedaccount/';
 // var API_URL = 'https://cors-anywhere.herokuapp.com/https://haveibeenpwned.com/api/v3/breachedaccount/';
-var API_KEY = "58a376db1fcb42fca86874f233289e5b";
+var API_KEY = "key";
 
 var input = document.getElementById('password-boxs');
 var resBox = document.getElementById('response');
